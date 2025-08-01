@@ -4,8 +4,24 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>종가집 흑염소탕</title>
-  <link rel="stylesheet" href="style.css" />
-
+  <style>
+    body { font-family: sans-serif; line-height: 1.6; margin: 0; }
+    header { background: #3c3f58; color: white; padding: 1rem; text-align: center; }
+    nav {
+      background: #555;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    nav a {
+      color: white;
+      padding: 1rem;
+      text-decoration: none;
+    }
+    nav a:hover { background: #777; }
+    section { padding: 2rem; max-width: 800px; margin: auto; }
+    footer { background: #eee; text-align: center; padding: 1rem; }
+  </style>
 </head>
 <body>
 
@@ -37,22 +53,36 @@
   <h2>오시는 길</h2>
   <p><strong>주소:</strong> 대구광역시 북구 팔달로37길 11 (팔달시장 인근)</p>
 
-  <!-- 지도 보기 버튼 -->
-  <div style="text-align:center; margin-bottom:1rem;">
-    <button onclick="showGoogleMap();" style="margin-right:10px;">구글 지도 보기</button>
-    <!-- 네이버 지도 검색: 가게명으로 바로 -->
-    <a href="https://map.naver.com/v5/search/종가집흑염소탕" target="_blank" rel="noopener noreferrer">
-      <button>네이버 지도에서 보기</button>
-    </a>
-  </div>
+  <!-- 지도 보기 섹션 -->
+<div style="text-align: center; margin-top: 2rem; line-height: 2;">
 
-  <!-- 구글 지도 iframe with pin (place search q) -->
-  <div id="googleMap" style="text-align:center;">
-    <iframe
-  width="100%" height="320" style="border:0;"
-  loading="lazy" allowfullscreen
-  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCgevy_NcJaWl-cS6krGS8MnLg_Rj6-QN0&q=종가집흑염소탕,대구광역시">
-</iframe>
+  <h3>📍 지도에서 위치 확인</h3>
+
+  <!-- 구글 지도 버튼 -->
+  <button onclick="showGoogleMap();" style="margin: 8px;">
+    🗺 구글 지도에서 위치 보기
+  </button>
+
+  <!-- 네이버 지도 링크 -->
+  <a href="https://map.naver.com/v5/search/종가집흑염소탕" target="_blank" rel="noopener noreferrer" style="display: inline-block; margin: 8px;">
+    🧭 네이버 지도 바로가기
+  </a>
+</div>
+
+<!-- 구글 지도 iframe -->
+<div id="googleMap" style="text-align:center; margin-top: 1rem;">
+  <iframe
+    width="100%" height="320" style="border:0;"
+    loading="lazy" allowfullscreen
+    src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCgevy_NcJaWl-cS6krGS8MnLg_Rj6-QN0&q=종가집흑염소탕,대구광역시">
+  </iframe>
+</div>
+
+<script>
+  function showGoogleMap(){
+    document.getElementById('googleMap').scrollIntoView({ behavior: 'smooth' });
+  }
+</script>
 
   </div>
 

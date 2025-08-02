@@ -49,6 +49,13 @@ footer {
   color: #555;
 }
 
+/* 모바일에서 메뉴판 이미지 크기 조절 */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+
 /* 반응형 준비 */
 @media (max-width: 600px) {
   nav {
